@@ -1,0 +1,79 @@
+function getAlternativePhrases(textWithCurseWord) {
+    const apiKey = "3f810349b2msh015da3694eb525ap19c26cjsn9261a2574f5f"; // Replace with your actual API key
+  
+    // Replace this URL with the actual API endpoint provided by the Word Associations Network API
+    const apiUrl = "https://rapidapi.com/twinword/api/word-associations";
+  
+    // Create the request data
+    const requestData = {
+      text: textWithCurseWord
+    };
+  
+    // Make the API request
+    return fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-API-Key": apiKey
+      },
+      body: JSON.stringify(requestData)
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok.");
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Extract the alternative phrases from the response data
+      const alternatives = data.alternatives;
+      return alternatives;
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+      return []; // Return an empty array as alternatives in case of an error
+    });
+  }
+
+  // Replace YOUR_API_KEY with your actual API key or set up the appropriate authentication method
+const apiKey = "1053081302185-o9ffkj1dq73nse9vbi680lfilpqd2rrf.apps.googleusercontent.com";
+
+function transcribeSpeech(audioBlob) {
+  const apiUrl = "https://speech.googleapis.com/v1/speech:recognize?key=" + apiKey;
+
+  // Create the request data
+  const requestData = {
+    config: {
+      encoding: "LINEAR16",
+      sampleRateHertz: 16000,
+      languageCode: "en-US",
+    },
+    audio: {
+      content: audioBlob,
+    },
+  };
+
+  // Make the API request
+  return fetch(apiUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(requestData),
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok.");
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Process the response data (transcription)
+    const transcription = data.results[0].alternatives[0].transcript;
+    return transcription;
+  })
+  .catch(error => {
+    console.error("Error fetching data:", error);
+    return ""; // Return an empty string in case of an error
+  });
+}
