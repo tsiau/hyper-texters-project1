@@ -6,12 +6,12 @@ const userBalance = {
 
 // Mock user profile pictures (you'd typically handle this server-side)
 const userProfilePictures = {
-    1: "https://via.placeholder.com/50", // User 1 has this profile picture
-    // Add profile pictures for other users as needed
-    };
+  1: "https://via.placeholder.com/50", // User 1 has this profile picture
+  // Add profile pictures for other users as needed
+};
 
-// The charge for using a curse word        
-const PROFANITY_CHARGE = 5; 
+// The charge for using a curse word
+const PROFANITY_CHARGE = 5;
 
 function chargeUserForProfanity(userId) {
   if (userBalance[userId] >= PROFANITY_CHARGE) {
