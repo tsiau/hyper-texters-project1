@@ -1,3 +1,26 @@
+// Function to load dynamic content
+function loadPage(url) {
+  fetch(url)
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById('dynamic-content').innerHTML = data;
+    })
+    .catch((error) => {
+      console.error('Error loading page:', error);
+    });
+}
+
+// Attach click event listeners to navigation links
+document.getElementById('home-link').addEventListener('click', (event) => {
+  event.preventDefault(); // Prevent default link behavior
+  loadPage('/home.html');
+});
+
+document.getElementById('profile-link').addEventListener('click', (event) => {
+  event.preventDefault(); // Prevent default link behavior
+  loadPage('/profile.html');
+});
+
 // Function to handle user sign-up
 function handleSignUp() {
     // Get the form inputs and perform any necessary validations
