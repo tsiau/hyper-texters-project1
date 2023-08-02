@@ -4,11 +4,23 @@
     <!-- Your meta tags, title, and CSS links here... -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatroom</title>
+    <title>Curse for Charity</title>
     <link rel="stylesheet" href="./assets/style/reset.css">
     <link rel="stylesheet" href="https://cdn.tailwindcss.com">
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
+
+<header class="nav"> 
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="./assets/images/logo.png" class="nav-logo-img">
+        </div>
+        <div class="nav-links">
+            <a href="/home.html" class="nav-link">Home</a>
+            <a href="/profile.html" class="nav-link">Profile</a>
+        </div>
+    </div>
+</header>
 <body>
 
 <div id="signup" class="flex justify-center items-center h-screen bg-sky-900">
@@ -16,7 +28,7 @@
         <img src="./assets/images/logo.png" class="h-14 px-0 py-0 w-80 -mb-12">
         <h1 class="text-3xl block text-center font-semibold -mt-12 py-0 text-sky-800">Sign Up</h1>
         <br>
-        <form action="/home.html" method="get" id="form1">
+        <form action="/home.html" method="get" id="signup-form">
             <div>
                 <label for="profilepic">Choose your profile picture:</label>
                 <input type="file" id="profilepic" name="profilepic" accept="image/png, image/jpeg" class="mt-3 text-sm">
