@@ -1,14 +1,15 @@
-// Function to load dynamic content
-function loadPage(url) {
-  fetch(url)
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById('dynamic-content').innerHTML = data;
-    })
-    .catch((error) => {
-      console.error('Error loading page:', error);
-    });
+function showPage(pageId) {
+  // Hide all the pages first
+  document.querySelectorAll('.page').forEach(page => {
+      page.style.display = 'none';
+  });
+
+  // Show the selected page
+  document.getElementById(pageId).style.display = 'block';
 }
+
+// Show the first page by default
+showPage('page1');
 
 // Attach click event listeners to navigation links
 document.getElementById('home-link').addEventListener('click', (event) => {
