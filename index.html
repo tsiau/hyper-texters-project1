@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Your meta tags, title, and CSS links here... -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curse for Charity</title>
-    <link rel="stylesheet" href="./assets/style/reset.css">
-    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
-    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/reset.css" />
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <style>
+      #chatroom,
+      #profile {
+        display: none;
+      }
+    </style>
+  </head>
 
-</head>
-
-<nav>
-    <a href="#" onclick="showPage('home-link')">Home</a>
-    <a href="#" onclick="showPage('profile')">Profile</a>
-    <a href="#" onclick="showPage('chatroom')">Chatroom</a>
-</nav>
-
-<header class="nav"> 
+  <header class="nav">
     <div class="nav-container">
-        <div class="nav-logo">
-            <img src="./assets/images/logo.png" class="nav-logo-img">
-        </div>
-        <div class="nav-links">
-            <a href="/home.html" class="nav-link">Home</a>
-            <a href="/profile.html" class="nav-link">Profile</a>
-            <a href="/chatroom.html" class="nav-link">Chatroom</a>
-        </div>
+      <div class="nav-logo">
+        <img src="./assets/images/logo.png" class="nav-logo-img" />
+      </div>
+      <div class="nav-links">
+        <button id="nav-home">Home</button>
+        <button id="nav-profile">Profile</button>
+        <button id="nav-chatroom">Chatroom</button>
+      </div>
     </div>
-    <div id="home-link" class="page">Home</div>
-    <div id="profile" class="page">Profile</div>
-    <div id="chatroom" class="page">Chatroom</div>
-        <script src="script.js"></script>
-</header>
-<body>
+  </header>
 
+  <body>
+    <!-- 
 <div id="signup" class="flex justify-center items-center h-screen bg-sky-900">
     <div class="w-96 h-full p-6 shadow-lg bg-white rounded-md">
         <img src="./assets/images/logo.png" class="h-14 px-0 py-0 w-80 -mb-12">
@@ -75,108 +71,175 @@
 </div>
 
 <div>
-    <!-- Feature card html file -->
+ 
     <div class="feature-card1-feature-card">
         <h2 class="feature-card1-text"><span>USER NAME</span></h2>
         <img alt="image" src="https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fHllbGxvdyUyMHRlY2h8ZW58MHx8fHwxNjI2MjU1NDk0&ixlib=rb-1.2.1&w=300" class="feature-card1-image">
     </div>
     <div>
-    <!-- Navigation Links -->
+  
     <nav>
       <a href="/home.html" id="home-link">Home</a>
       <a href="/profile.html" id="profile-link">Profile</a>
   </nav>
     </div>
 </div>
-
-<div id="chatroom" class="flex justify-center items-center h-screen bg-sky-900">
-    <div class="w-11/12 h-screen px-6 py-0 shadow-lg bg-white rounded-md">
-        <img src="./assets/images/logo.png" class="object-contain w-32 h-32 ml-8 -mt-6 -mb-4">
+-->
+    <div
+      id="chatroom"
+      class="flex justify-center items-center h-screen bg-sky-900"
+    >
+      <div class="w-11/12 h-screen px-6 py-0 shadow-lg bg-white rounded-md">
+        <img
+          src="./assets/images/logo.png"
+          class="object-contain w-32 h-32 ml-8 -mt-6 -mb-4"
+        />
         <div>
-            <h1 class="text-4xl block text-center text-sky-800 font-semibold -mt-20 py-0">Chatroom Page</h1>
-            <div class="home-container1">
-              <!-- Example home.html -->
-              <h1>Welcome to the Chatroom!</h1>
-                <!-- Chatroom content and other elements... -->
-                <button type="button" class="bg-sky-800 text-slate-50 px-10 py-1 ml-2 shadow-lg rounded-md border-2 border-gray-50">Invite Users</button>
-                <button type="button" class="bg-sky-800 text-slate-50 px-14 py-1 shadow-lg rounded-md border-2 border-gray-50">Logout</button>
+          <h1
+            class="text-4xl block text-center text-sky-800 font-semibold -mt-20 py-0"
+          >
+            Chatroom Page
+          </h1>
+          <div class="home-container1">
+            <!-- Example home.html -->
+            <h1>Welcome to the Chatroom!</h1>
+            <!-- Chatroom content and other elements... -->
+            <button
+              type="button"
+              class="bg-sky-800 text-slate-50 px-10 py-1 ml-2 shadow-lg rounded-md border-2 border-gray-50"
+            >
+              Invite Users
+            </button>
+            <button
+              type="button"
+              class="bg-sky-800 text-slate-50 px-14 py-1 shadow-lg rounded-md border-2 border-gray-50"
+            >
+              Logout
+            </button>
+          </div>
+          <div class="bg-sky-800 h-96 w-96"></div>
+          <div class="home-features">
+            <div class="home-container2">
+              <div
+                class="feature-card1-feature-card feature-card1-root-class-name"
+              >
+                <h2
+                  class="feature-card1-text text-center text-sky-800 font-semibold"
+                >
+                  <span>USER NAME</span>
+                </h2>
+                <img
+                  alt="image"
+                  src="./assets/images/headshot-300w.png"
+                  class="feature-card1-image"
+                />
+              </div>
             </div>
-            <div class="bg-sky-800 h-96 w-96"></div>
-            <div class="home-features">
-                <div class="home-container2">
-                    <div class="feature-card1-feature-card feature-card1-root-class-name">
-                        <h2 class="feature-card1-text text-center text-sky-800 font-semibold"><span>USER NAME</span></h2>
-                        <img alt="image" src="./assets/images/headshot-300w.png" class="feature-card1-image">
-                    </div>
-                </div>
-            </div>
-             <!-- HTML elements for user balance display and profile picture -->
-             <div id="chat-room"></div>
-              <div id="profilePicture" class="profilePicture"></div>
-              <div id="profilePicturesContainer"></div>
-              <!-- Add a button to simulate speech-to-text transcription -->
-              <button id="startTranscriptionBtn">Start Transcription</button>
+          </div>
+          <!-- HTML elements for user balance display and profile picture -->
+          <div id="chat-room"></div>
+          <div id="profilePicture" class="profilePicture"></div>
+          <div id="profilePicturesContainer"></div>
+          <!-- Add a button to simulate speech-to-text transcription -->
+          <button id="startTranscriptionBtn">Start Transcription</button>
         </div>
+      </div>
     </div>
-</div>
 
-<div id="profile">
-    <div class="userprofile-container">
+    <div id="profile">
+      <div class="userprofile-container">
         <h1 class="userprofile-text">
           <!-- Example profile.html -->
           <h1>User Profile Settings</h1>
-            <!-- Profile settings form and other elements... -->
-            <span class="userprofile-text01 feature-card1-text text-center text-sky-800 font-semibold">USERNAME:</span>
-            <br>
-            <br>
-            <br>
+          <!-- Profile settings form and other elements... -->
+          <span
+            class="userprofile-text01 feature-card1-text text-center text-sky-800 font-semibold"
+            >USERNAME:</span
+          >
+          <br />
+          <br />
+          <br />
         </h1>
         <div class="userprofile-features">
-            <input type="text" placeholder="placeholder" required="" class="userprofile-textinput input">
-            <input type="text" placeholder="placeholder" class="userprofile-textinput1 input">
-            <input type="text" placeholder="placeholder" required="" class="userprofile-textinput2 input">
-            <div class="feature-card1-feature-card feature-card1-root-class-name8">
-                <img alt="image" src="./assets/images/headshot-300w.png" class="feature-card1-image">
+          <input
+            type="text"
+            placeholder="placeholder"
+            required=""
+            class="userprofile-textinput input"
+          />
+          <input
+            type="text"
+            placeholder="placeholder"
+            class="userprofile-textinput1 input"
+          />
+          <input
+            type="text"
+            placeholder="placeholder"
+            required=""
+            class="userprofile-textinput2 input"
+          />
+          <div
+            class="feature-card1-feature-card feature-card1-root-class-name8"
+          >
+            <img
+              alt="image"
+              src="./assets/images/headshot-300w.png"
+              class="feature-card1-image"
+            />
+          </div>
+          <h1 class="userprofile-text05">Profile Settings</h1>
+          <div class="userprofile-container1">
+            <div class="userprofile-container2">
+              <div class="userprofile-container3"></div>
             </div>
-            <h1 class="userprofile-text05">Profile Settings</h1>
-            <div class="userprofile-container1">
-                <div class="userprofile-container2">
-                    <div class="userprofile-container3"></div>
-                </div>
-            </div>
+          </div>
         </div>
         <button type="button" class="userprofile-button button">SAVE</button>
         <label class="userprofile-text06">First &amp; Last Name</label>
         <label class="userprofile-text07">Email Address</label>
         <label class="userprofile-text08">Select Charitable Org.</label>
         <div data-thq="thq-dropdown" class="userprofile-thq-dropdown list-item">
-            <div data-thq="thq-dropdown-toggle" class="userprofile-dropdown-toggle">
-                <div data-thq="thq-dropdown-arrow" class="userprofile-dropdown-arrow">
-                    <svg viewBox="0 0 1024 1024" class="userprofile-icon">
-                        <path d="M426 726v-428l214 214z"></path>
-                    </svg>
-                </div>
+          <div
+            data-thq="thq-dropdown-toggle"
+            class="userprofile-dropdown-toggle"
+          >
+            <div
+              data-thq="thq-dropdown-arrow"
+              class="userprofile-dropdown-arrow"
+            >
+              <svg viewBox="0 0 1024 1024" class="userprofile-icon">
+                <path d="M426 726v-428l214 214z"></path>
+              </svg>
             </div>
-            <ul data-thq="thq-dropdown-list" class="userprofile-dropdown-list">
-                <li data-thq="thq-dropdown" class="userprofile-dropdown list-item">
-                    <div data-thq="thq-dropdown-toggle" class="userprofile-dropdown-toggle1">
-                        <span class="userprofile-text09">Sub-menu Item</span>
-                    </div>
-                </li>
-                <li data-thq="thq-dropdown" class="userprofile-dropdown1 list-item">
-                    <div data-thq="thq-dropdown-toggle" class="userprofile-dropdown-toggle2">
-                        <span class="userprofile-text10">Sub-menu Item</span>
-                    </div>
-                </li>
-                <li data-thq="thq-dropdown" class="userprofile-dropdown2 list-item">
-                    <div data-thq="thq-dropdown-toggle" class="userprofile-dropdown-toggle3">
-                        <span class="userprofile-text11">Sub-menu Item</span>
-                    </div>
-                </li>
-            </ul>
+          </div>
+          <ul data-thq="thq-dropdown-list" class="userprofile-dropdown-list">
+            <li data-thq="thq-dropdown" class="userprofile-dropdown list-item">
+              <div
+                data-thq="thq-dropdown-toggle"
+                class="userprofile-dropdown-toggle1"
+              >
+                <span class="userprofile-text09">Sub-menu Item</span>
+              </div>
+            </li>
+            <li data-thq="thq-dropdown" class="userprofile-dropdown1 list-item">
+              <div
+                data-thq="thq-dropdown-toggle"
+                class="userprofile-dropdown-toggle2"
+              >
+                <span class="userprofile-text10">Sub-menu Item</span>
+              </div>
+            </li>
+            <li data-thq="thq-dropdown" class="userprofile-dropdown2 list-item">
+              <div
+                data-thq="thq-dropdown-toggle"
+                class="userprofile-dropdown-toggle3"
+              >
+                <span class="userprofile-text11">Sub-menu Item</span>
+              </div>
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
-</div>
-
-</body>
+  </body>
 </html>
