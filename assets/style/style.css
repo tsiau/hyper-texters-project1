@@ -56,6 +56,10 @@ hr {
   /* 3 */
 }
 
+.page {
+  display: none;
+}
+
 /* Add a black background color to the top navigation */
 .nav {
   background-color: #333;
