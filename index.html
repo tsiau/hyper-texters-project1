@@ -12,9 +12,9 @@
 </head>
 
 <nav>
-    <a href="#" onclick="showPage('page1')">Page 1</a>
-    <a href="#" onclick="showPage('page2')">Page 2</a>
-    <a href="#" onclick="showPage('page3')">Page 3</a>
+    <a href="#" onclick="showPage('home-link')">Home</a>
+    <a href="#" onclick="showPage('profile')">Profile</a>
+    <a href="#" onclick="showPage('chatroom')">Chatroom</a>
 </nav>
 
 <header class="nav"> 
@@ -176,36 +176,6 @@
         </div>
     </div>
 </div>
-
-<!-- Include the JavaScript code inside a script tag -->
-<script>
-  // Place the JavaScript code here
-</script>
-<!-- Example app.js -->
-<script>
-  // Function to load dynamic content
-  function loadPage(url) {
-    fetch(url)
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById('dynamic-content').innerHTML = data;
-      })
-      .catch((error) => {
-        console.error('Error loading page:', error);
-      });
-  }
-
-  // Attach click event listeners to navigation links
-  document.querySelector('a[href="/home.html"]').addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent default link behavior
-    loadPage('/home.html');
-  });
-
-  document.querySelector('a[href="/profile.html"]').addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent default link behavior
-    loadPage('/profile.html');
-  });
-</script>
 
 </body>
 </html>

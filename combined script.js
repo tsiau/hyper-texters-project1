@@ -5,7 +5,7 @@ function showPage(pageId) {
   });
 
   // Show the selected page
-  document.getElementById(pageId).style.display = 'block';
+  document.getElementById('home-link').style.display = 'block';
 }
 
 // Show the first page by default
