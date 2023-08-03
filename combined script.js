@@ -48,7 +48,6 @@ document.querySelectorAll(".nav-links").forEach((navLink) => {
   navLink.addEventListener("click", (event) => {
     let id = event.target.id;
     let splitId = id.split("-")[1];
-    console.log("splitId", splitId);
     showPage(splitId);
   });
 });

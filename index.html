@@ -1,245 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Your meta tags, title, and CSS links here... -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curse for Charity</title>
-    <link rel="stylesheet" href="./assets/style/reset.css" />
-    <link rel="stylesheet" href="https://cdn.tailwindcss.com" />
-    <link rel="stylesheet" href="./assets/style/style.css" />
-    <style>
-      #chatroom,
-      #profile {
-        display: none;
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-page Layout</title>
+  <link rel="reset" href="./assets/reset.css">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
 
-  <header class="nav">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <img src="./assets/images/logo.png" class="nav-logo-img" />
-      </div>
-      <div class="nav-links">
-        <button id="nav-home">Home</button>
-        <button id="nav-profile">Profile</button>
-        <button id="nav-chatroom">Chatroom</button>
-      </div>
+  <header>
+  <nav>
+    <image id="logo" src="./assets/images/logo.png" alt="Logo">
+    <div class="nav-links">
+      <button id="nav-home">Home</button>
+      <button id="nav-profile">Profile</button>
+      <button id="nav-chatroom">Chatroom</button>
     </div>
-  </header>
-
-  <body>
-    <!-- 
-<div id="signup" class="flex justify-center items-center h-screen bg-sky-900">
-    <div class="w-96 h-full p-6 shadow-lg bg-white rounded-md">
-        <img src="./assets/images/logo.png" class="h-14 px-0 py-0 w-80 -mb-12">
-        <h1 class="text-3xl block text-center font-semibold -mt-12 py-0 text-sky-800">Sign Up</h1>
-        <br>
-        <form action="/home.html" method="get" id="signup-form">
-            <div>
-                <label for="profilepic">Choose your profile picture:</label>
-                <input type="file" id="profilepic" name="profilepic" accept="image/png, image/jpeg" class="mt-3 text-sm">
-            </div>
-            <div class="mt-3">
-                <label for="name" class="block text-base mb-2">Name</label>
-                <input type="text" id="name" class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter your full name"/>
-            </div>
-            <div class="mt-3">
-                <label for="email" class="block text-base mb-2">Email</label>
-                <input type="email" id="email" class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter your email ID"/>
-            </div>
-            <div class="mt-3 mb-3">
-                <label for="org" class="block mb-2 text-sm">Choose the organization you want to donate your swear jar money to:</label>
-                <input type="text" id="org" class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter the name of the organization"/>
-            </div>
-            <div class="mt-3">
-                <label for="ccn" class="block text-base mb-2">Credit Card Number:</label>
-                <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
-            </div>
-            <div class="mt-3">
-                <label for="zipcode" class="block text-base mb-2">ZIP Code</label>
-                <input type="text" pattern="[0-9]{5}" title="zipcode" placeholder="Enter 5 digit zipcode" />
-            </div>
-            <div class="mt-3">
-                <label for="password" class="block text-base mb-2">Password</label>
-                <input type="password" id="password" class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter Password"/>
-            </div>
-        </form>
-        <button type="button" form="form2" value="Submit" class="bg-sky-800 text-slate-50 px-14 py-1 shadow-lg rounded-md">Sign Up</button>
-    </div>
-</div>
-
-<div>
- 
-    <div class="feature-card1-feature-card">
-        <h2 class="feature-card1-text"><span>USER NAME</span></h2>
-        <img alt="image" src="https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fHllbGxvdyUyMHRlY2h8ZW58MHx8fHwxNjI2MjU1NDk0&ixlib=rb-1.2.1&w=300" class="feature-card1-image">
-    </div>
-    <div>
-  
-    <nav>
-      <a href="/home.html" id="home-link">Home</a>
-      <a href="/profile.html" id="profile-link">Profile</a>
   </nav>
-    </div>
-</div>
--->
-    <div
-      id="chatroom"
-      class="flex justify-center items-center h-screen bg-sky-900"
-    >
-      <div class="w-11/12 h-screen px-6 py-0 shadow-lg bg-white rounded-md">
-        <img
-          src="./assets/images/logo.png"
-          class="object-contain w-32 h-32 ml-8 -mt-6 -mb-4"
-        />
-        <div>
-          <h1
-            class="text-4xl block text-center text-sky-800 font-semibold -mt-20 py-0"
-          >
-            Chatroom Page
-          </h1>
-          <div class="home-container1">
-            <!-- Example home.html -->
-            <h1>Welcome to the Chatroom!</h1>
-            <!-- Chatroom content and other elements... -->
-            <button
-              type="button"
-              class="bg-sky-800 text-slate-50 px-10 py-1 ml-2 shadow-lg rounded-md border-2 border-gray-50"
-            >
-              Invite Users
-            </button>
-            <button
-              type="button"
-              class="bg-sky-800 text-slate-50 px-14 py-1 shadow-lg rounded-md border-2 border-gray-50"
-            >
-              Logout
-            </button>
-          </div>
-          <div class="bg-sky-800 h-96 w-96"></div>
-          <div class="home-features">
-            <div class="home-container2">
-              <div
-                class="feature-card1-feature-card feature-card1-root-class-name"
-              >
-                <h2
-                  class="feature-card1-text text-center text-sky-800 font-semibold"
-                >
-                  <span>USER NAME</span>
-                </h2>
-                <img
-                  alt="image"
-                  src="./assets/images/headshot-300w.png"
-                  class="feature-card1-image"
-                />
-              </div>
-            </div>
-          </div>
-          <!-- HTML elements for user balance display and profile picture -->
-          <div id="chat-room"></div>
-          <div id="profilePicture" class="profilePicture"></div>
-          <div id="profilePicturesContainer"></div>
-          <!-- Add a button to simulate speech-to-text transcription -->
-          <button id="startTranscriptionBtn">Start Transcription</button>
-        </div>
-      </div>
+  </header> 
+
+  <main> 
+    <div id="home" class="page">
+      <h1 class="home-text">Home Page</h1>
+      <p>Welcome to the home page.</p>
     </div>
 
-    <div id="profile">
-      <div class="userprofile-container">
-        <h1 class="userprofile-text">
-          <!-- Example profile.html -->
-          <h1>User Profile Settings</h1>
-          <!-- Profile settings form and other elements... -->
-          <span
-            class="userprofile-text01 feature-card1-text text-center text-sky-800 font-semibold"
-            >USERNAME:</span
-          >
+    <div id="profile" class="page" style="display: none;">
+      <h1>Profile Page</h1>
+      <img src="./assets/images/headshot-300w.png" alt="Headshot" width="300" height="300">
+      <p>Your profile information here.</p>
+    </div>
+
+    <div>
+      <div id="chatroom" class="page">
+        <h1 class="home-text">
+          <span class="home-text1">CHATROOM:</span>
           <br />
           <br />
           <br />
         </h1>
-        <div class="userprofile-features">
-          <input
-            type="text"
-            placeholder="placeholder"
-            required=""
-            class="userprofile-textinput input"
-          />
-          <input
-            type="text"
-            placeholder="placeholder"
-            class="userprofile-textinput1 input"
-          />
-          <input
-            type="text"
-            placeholder="placeholder"
-            required=""
-            class="userprofile-textinput2 input"
-          />
-          <div
-            class="feature-card1-feature-card feature-card1-root-class-name8"
-          >
-            <img
-              alt="image"
-              src="./assets/images/headshot-300w.png"
-              class="feature-card1-image"
-            />
-          </div>
-          <h1 class="userprofile-text05">Profile Settings</h1>
-          <div class="userprofile-container1">
-            <div class="userprofile-container2">
-              <div class="userprofile-container3"></div>
-            </div>
-          </div>
+
+      <div class="home-container1">
+        <button type="button" class="home-button button">INVITE USERS</button>
+        <button type="button" class="home-button1 button">LOGOUT</button>
+      </div>
+
+      <div class="home-features">
+        <h1 class="home-text5">ChatRoom Name</h1>
+
+
+        <div class="home-container2">
+          <div class="feature-card1-feature-card feature-card1-root-class-name">
+            <h2 class="feature-card1-text"><span>USER NAME</span></h2>
+             <img alt="Generic User image" src="./assets/images/headshot-300w.png" class="feature-card1-image"/>
         </div>
-        <button type="button" class="userprofile-button button">SAVE</button>
-        <label class="userprofile-text06">First &amp; Last Name</label>
-        <label class="userprofile-text07">Email Address</label>
-        <label class="userprofile-text08">Select Charitable Org.</label>
-        <div data-thq="thq-dropdown" class="userprofile-thq-dropdown list-item">
-          <div
-            data-thq="thq-dropdown-toggle"
-            class="userprofile-dropdown-toggle"
-          >
-            <div
-              data-thq="thq-dropdown-arrow"
-              class="userprofile-dropdown-arrow"
-            >
-              <svg viewBox="0 0 1024 1024" class="userprofile-icon">
-                <path d="M426 726v-428l214 214z"></path>
-              </svg>
-            </div>
-          </div>
-          <ul data-thq="thq-dropdown-list" class="userprofile-dropdown-list">
-            <li data-thq="thq-dropdown" class="userprofile-dropdown list-item">
-              <div
-                data-thq="thq-dropdown-toggle"
-                class="userprofile-dropdown-toggle1"
-              >
-                <span class="userprofile-text09">Sub-menu Item</span>
-              </div>
-            </li>
-            <li data-thq="thq-dropdown" class="userprofile-dropdown1 list-item">
-              <div
-                data-thq="thq-dropdown-toggle"
-                class="userprofile-dropdown-toggle2"
-              >
-                <span class="userprofile-text10">Sub-menu Item</span>
-              </div>
-            </li>
-            <li data-thq="thq-dropdown" class="userprofile-dropdown2 list-item">
-              <div
-                data-thq="thq-dropdown-toggle"
-                class="userprofile-dropdown-toggle3"
-              >
-                <span class="userprofile-text11">Sub-menu Item</span>
-              </div>
-            </li>
-          </ul>
+
+        <div class="feature-card1-feature-card feature-card1-root-class-name1">
+          <h2 class="feature-card1-text"><span>USER NAME</span></h2>
+            <img alt="image" src="./assets/images/headshot-300w.png" class="feature-card1-image"/>
+        </div>
+            
+        <div class="feature-card1-feature-card feature-card1-root-class-name2">
+          <h2 class="feature-card1-text"><span>USER NAME</span></h2>
+            <img alt="image" src="./assets/images/headshot-300w.png" class="feature-card1-image"/>
+        </div>
+
+        <div class="feature-card1-feature-card feature-card1-root-class-name3">
+          <h2 class="feature-card1-text"><span>USER NAME</span></h2>
+            <img alt="image" src="./assets/images/headshot-300w.png" class="feature-card1-image"/>
+        </div>
+            
+        <div class="feature-card1-feature-card feature-card1-root-class-name4">
+          <h2 class="feature-card1-text"><span>USER NAME</span></h2>
+            <img alt="image" src="./assets/images/headshot-300w.png" class="feature-card1-image"/>
+        </div>
+      
+        <div class="feature-card1-feature-card feature-card1-root-class-name5">
+          <h2 class="feature-card1-text"><span>USER NAME</span></h2>
+            <img alt="image" src="./assets/images/headshot-300w.png" class="feature-card1-image"/>
+        </div>
+
+        <div class="feature-card1-feature-card feature-card1-root-class-name6">
+          <h2 class="feature-card1-text"><span>USER NAME</span></h2>
+            <img alt="image" src="./assets/images/headshot-300w.png" class="feature-card1-image"/>
+        </div>
+
+        <div class="feature-card1-feature-card feature-card1-root-class-name7">
+          <h2 class="feature-card1-text"><span>USER NAME</span></h2>
+            <img alt="image" src="./assets/images/headshot-300w.png" class="feature-card1-image"/>
         </div>
       </div>
-    </div>
-  </body>
+    </div>  
+  </main>
+
+  <script src="./combined script.js"></script>
+
+</body>
 </html>
