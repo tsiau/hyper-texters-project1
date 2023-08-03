@@ -16,7 +16,7 @@ function showPage(pageId) {
 
 window.onload = function () {
   // Set default page to Chatroom
-  showPage("chatroom");
+  showPage("home");
 
   // Attach event listeners to buttons
   document.getElementById("nav-home").addEventListener("click", function () {
@@ -76,12 +76,11 @@ function startTranscription() {
   console.log("Transcription started...");
 }
 
-// Attach event listeners to the trigger buttons
+/* // Attach event listeners to the trigger buttons
 document.addEventListener("DOMContentLoaded", () => {
   // Trigger Sign Up when the Sign Up button is clicked
-  document
-    .querySelector("#form1 button[type='button']")
-    .addEventListener("click", handleSignUp);
+  document.querySelector("#form1 button[type='button']")
+  .addEventListener("click", handleSignUp);
 
   // Trigger Logout when the Logout button is clicked
   document
@@ -93,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelector("#chatroom #startTranscriptionBtn")
     .addEventListener("click", startTranscription);
 });
+*/
 
 // Mock user balance (you'd typically handle this server-side)
 const userBalance = {
